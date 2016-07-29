@@ -1,0 +1,24 @@
+{
+  "name": "angular-stripe-checkout",
+  "main": "angular-stripe-checkout.js",
+  "version": "4.0.2",
+  "authors": [
+    "Tobyn Baugher <tobynb@gmail.com>"
+  ],
+  "description": "AngularJS wrapper around Stripe Checkout",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tobyn/angular-stripe-checkout",
+  "_release": "4.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.0.2",
+    "commit": "f26d574a0012d897f98bcfb984f675b01b2f4285"
+  },
+  "_source": "https://github.com/tobyn/angular-stripe-checkout.git",
+  "_target": "^4.0.2",
+  "_originalSource": "angular-stripe-checkout",
+  "_direct": true
+}

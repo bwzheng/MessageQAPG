@@ -1,0 +1,18 @@
+<div class="modal slide-in-up" ng-controller="ProfessionalDetailController">
+   <header class="bar bar-header bar-secondary">
+      <h1 class="title">Ask {{professional.name}}</h1>
+      <button class="button button-clear button-positive" ng-click="close()">Close</button>
+   </header>
+   <ion-content class="has-header padding" has-tabs="true">
+     <img ng-src="{{professional.face}}" class="profileImage">
+     <h2>{{professional.name}}</h2>
+     <h4>${{professional.price}}</h4>
+     <p>{{professional.intro}}</p>
+     <textarea placeholder="Message" ng-model="questionData.item" ng-trim="false" maxlength="550" id="field"></textarea>
+     <span>{{550 - questionData.item.length}} characters left</span>
+     <br>
+     <br>
+     <br>
+     <button class="button button-positive" ng-click="payAndAsk()">Pay and Ask</button>
+   </ion-content>
+</div>

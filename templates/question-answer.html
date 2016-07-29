@@ -1,0 +1,28 @@
+<div class="modal slide-in-up" ng-controller="QuestionDetailController">
+   <header class="bar bar-header bar-secondary" style="background: rgba(0,0,0,0);">
+     <h2 class="title">Answer by {{question[0].professional.name}}</h2>
+     <button class="button button-clear button-positive" ng-click="close()">Close</button>
+   </header>
+
+
+   <ion-content class="has-header" has-tabs="true">
+     <div class="item item-avatar" style="width: 80%; margin-left: 10%; margin-bottom: 10px;">
+       <img ng-src="{{question[0].professional.face}}">
+       <h2>{{question[0].professional.name}}</h2>
+       <p>${{question[0].professional.price}}</p>
+     </div>
+
+     <div class="item item-text-wrap" style="padding: 10px; margin-bottom: 10px;">
+       <p>
+         {{question[0].item}}
+       </p>
+     </div>
+     <div class="item item-icon-left assertive" style="width: 80%; margin-left: 10%;">
+       <div style="margin-left: -5%;" ng-show="{{hasAnswered}}"><audio controls></audio></div>
+     </div>
+
+   </ion-content>
+
+
+
+</div>

@@ -1,0 +1,26 @@
+<div class="bar bar-header bar-assertive">
+  <h1 class="title">Popular Questions</h1>
+  <button class="button button-clear" ng-click="logout()">Logout</button>
+</div>
+<ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+  <ion-refresher on-refresh="doRefresh('1')"
+     pulling-text="Pull to refresh"
+     refreshing-text="Refreshing..."
+     refreshing-icon="ion-loading-c">
+  </ion-refresher>
+  <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="question in list" type="item-text-wrap" ng-click="gotoDetail('{{question._id}}')">
+    <img ng-src="{{question.professional.face}}">
+    <h2>{{question.item}}</h2>
+    <p>Anonymous To: {{question.professional.name}}</p>
+    <p am-time-ago="{{question.created}}"></p>
+    <i class="icon ion-chevron-right icon-accessory" ng-show="{{!question.hasAnswered}}" style="color: orange; font-size: 21px;"></i>
+    <i class="icon ion-checkmark icon-accessory" ng-show="{{question.hasAnswered}}" style="color: green; font-size: 21px;"></i>
+   </ion-item>
+  <div class="card"  ng-show="noData">
+     <div class="item item-text-wrap">
+        <span>
+          Welcome to Message QA. Ask your first question <a href="#/tab/find">here</a>.
+        </span>
+     </div>
+  </div>
+</ion-content>
